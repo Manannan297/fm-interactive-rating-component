@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-:root {
-  --color-orange: hsl(25, 97%, 53%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-light-grey: hsl(217, 12%, 63%);
-  --color-medium-grey: hsl(216, 12%, 54%);
-  --color-medium-grey-transparent: hsla(216, 12%, 54%, 0.1);
-  --color-dark-blue: hsl(213, 19%, 18%);
-  --color-very-dark-blue: hsl(216, 12%, 8%);
-  --font-base: "Overpass", sans-serif;
-}
-
 *,
 *::before,
 *::after {
@@ -23,11 +12,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-base);
+  font-family: "Overpass", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.2;
-  background-color: var(--color-very-dark-blue);
+  background-color: hsl(216deg, 12%, 8%);
 }
 
 .container {
@@ -43,7 +32,7 @@ body {
   padding-bottom: 1rem;
   font-size: 0.6875rem;
   text-align: center;
-  color: var(--color-light-grey);
+  color: hsl(217deg, 12%, 63%);
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
@@ -70,7 +59,7 @@ body {
           backface-visibility: hidden;
   position: relative;
   transition: 1s transform ease;
-  background: var(--color-dark-blue);
+  background: hsl(213deg, 19%, 18%);
   border-radius: 1rem;
 }
 @media (min-width: 540px) {
@@ -106,7 +95,7 @@ body {
   width: 2.625rem;
   height: 2.625rem;
   border-radius: 50%;
-  background: var(--color-medium-grey-transparent);
+  background: hsla(216deg, 12%, 54%, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +109,7 @@ body {
   }
 }
 .card__title {
-  color: var(--color-white);
+  color: hsl(0deg, 0%, 100%);
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 0.75rem;
@@ -132,7 +121,7 @@ body {
 }
 .card__text {
   font-size: 0.9375rem;
-  color: var(--color-light-grey);
+  color: hsl(217deg, 12%, 63%);
   line-height: 1.5;
   letter-spacing: -0.03em;
   margin-top: 0;
@@ -144,8 +133,8 @@ body {
 }
 .card__btn {
   display: block;
-  background-color: var(--color-orange);
-  color: var(--color-white);
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
   font-family: inherit;
   font-weight: 700;
   font-size: 0.875rem;
@@ -161,8 +150,8 @@ body {
 }
 .card__btn:hover, .card__btn:focus {
   outline: none;
-  background-color: var(--color-white);
-  color: var(--color-orange);
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
 }
 .card__image {
   display: block;
@@ -176,8 +165,8 @@ body {
   }
 }
 .card__result {
-  background-color: var(--color-medium-grey-transparent);
-  color: var(--color-orange);
+  background-color: hsla(216deg, 12%, 54%, 0.1);
+  color: hsl(25deg, 97%, 53%);
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1;
@@ -192,7 +181,7 @@ body {
 }
 .card__form:invalid .card__btn {
   cursor: default;
-  background-color: var(--color-light-grey);
+  background-color: hsl(217deg, 12%, 63%);
   pointer-events: none;
 }
 
@@ -200,6 +189,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
+  border: none;
   margin: 1.5rem 0;
 }
 @media (min-width: 540px) {
@@ -220,21 +211,21 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-light-grey);
+  color: hsl(217deg, 12%, 63%);
   width: 2.625rem;
   height: 2.625rem;
   line-height: 1;
   border-radius: 50%;
-  background: var(--color-medium-grey-transparent);
+  background: hsla(216deg, 12%, 54%, 0.1);
   cursor: pointer;
 }
 .rating__label:hover {
-  background-color: var(--color-orange);
-  color: var(--color-white);
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
 }
 .rating__label.active {
-  background-color: var(--color-light-grey);
-  color: var(--color-white);
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
 }
 @media (min-width: 540px) {
   .rating__label {
@@ -243,6 +234,6 @@ body {
   }
 }
 .rating__input:checked ~ .rating__label {
-  background-color: var(--color-medium-grey);
-  color: var(--color-white);
+  background-color: hsl(216deg, 12%, 54%);
+  color: hsl(0deg, 0%, 100%);
 }/*# sourceMappingURL=style.css.map */

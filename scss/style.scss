@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
-:root {
-  --color-orange: hsl(25, 97%, 53%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-light-grey: hsl(217, 12%, 63%);
-  --color-medium-grey: hsl(216, 12%, 54%);
-  --color-medium-grey-transparent: hsla(216, 12%, 54%, 0.1);
-  --color-dark-blue: hsl(213, 19%, 18%);
-  --color-very-dark-blue: hsl(216, 12%, 8%);
-  --font-base: "Overpass", sans-serif;
-}
+$color-orange: hsl(25, 97%, 53%);
+$color-white: hsl(0, 0%, 100%);
+$color-light-grey: hsl(217, 12%, 63%);
+$color-medium-grey: hsl(216, 12%, 54%);
+$color-medium-grey-transparent: hsla(216, 12%, 54%, 0.1);
+$color-dark-blue: hsl(213, 19%, 18%);
+$color-very-dark-blue: hsl(216, 12%, 8%);
+$font-base: "Overpass", sans-serif;
+$width-tablet: 540px;
 
 *,
 *::before,
@@ -24,11 +23,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-base);
+  font-family: $font-base;
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.2;
-  background-color: var(--color-very-dark-blue);
+  background-color: $color-very-dark-blue;
 }
 
 .container {
@@ -44,7 +43,7 @@ body {
   padding-bottom: 1rem;
   font-size: 0.6875rem;
   text-align: center;
-  color: var(--color-light-grey);
+  color: $color-light-grey;
 
   a {
     color: hsl(228, 45%, 44%);
@@ -61,7 +60,7 @@ body {
   max-width: 20.375rem;
   perspective: 1000px;
 
-  @media (min-width: 540px) {
+  @media (min-width: $width-tablet) {
     max-width: 25.875rem;
   }
 
@@ -70,10 +69,10 @@ body {
     backface-visibility: hidden;
     position: relative;
     transition: 1s transform ease;
-    background: var(--color-dark-blue);
+    background: $color-dark-blue;
     border-radius: 1rem;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       padding: 1.875rem 2.25rem;
       border-radius: 2.125rem;
     }
@@ -111,13 +110,13 @@ body {
     width: 2.625rem;
     height: 2.625rem;
     border-radius: 50%;
-    background: var(--color-medium-grey-transparent);
+    background: $color-medium-grey-transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.25rem;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       width: 3.125rem;
       height: 3.125rem;
       margin-bottom: 2rem;
@@ -125,32 +124,32 @@ body {
   }
 
   &__title {
-    color: var(--color-white);
+    color: $color-white;
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 0.75rem;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       font-size: 1.75rem;
     }
   }
 
   &__text {
     font-size: 0.9375rem;
-    color: var(--color-light-grey);
+    color: $color-light-grey;
     line-height: 1.5;
     letter-spacing: -0.03em;
     margin-top: 0;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       letter-spacing: 0;
     }
   }
 
   &__btn {
     display: block;
-    background-color: var(--color-orange);
-    color: var(--color-white);
+    background-color: $color-orange;
+    color: $color-white;
     font-family: inherit;
     font-weight: 700;
     font-size: 0.875rem;
@@ -167,8 +166,8 @@ body {
     &:hover,
     &:focus {
       outline: none;
-      background-color: var(--color-white);
-      color: var(--color-orange);
+      background-color: $color-white;
+      color: $color-orange;
     }
   }
 
@@ -177,15 +176,15 @@ body {
     max-width: 9.0625rem;
     margin: 0.625rem auto 1.5rem;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       max-width: none;
       margin: 0.375rem auto 2.25rem;
     }
   }
 
   &__result {
-    background-color: var(--color-medium-grey-transparent);
-    color: var(--color-orange);
+    background-color: $color-medium-grey-transparent;
+    color: $color-orange;
     font-weight: 400;
     font-size: 0.9375rem;
     line-height: 1;
@@ -193,14 +192,14 @@ body {
     border-radius: 5rem;
     margin-bottom: 1.75rem;
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       margin-bottom: 2rem;
     }
   }
 
   &__form:invalid .card__btn {
     cursor: default;
-    background-color: var(--color-light-grey);
+    background-color: $color-light-grey;
     pointer-events: none;
   }
 }
@@ -209,9 +208,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
+  border: none;
   margin: 1.5rem 0;
 
-  @media (min-width: 540px) {
+  @media (min-width: $width-tablet) {
     letter-spacing: 0;
     margin: 2rem 0;
   }
@@ -229,32 +230,32 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-light-grey);
+    color: $color-light-grey;
     width: 2.625rem;
     height: 2.625rem;
     line-height: 1;
     border-radius: 50%;
-    background: var(--color-medium-grey-transparent);
+    background: $color-medium-grey-transparent;
     cursor: pointer;
 
     &:hover {
-      background-color: var(--color-orange);
-      color: var(--color-white);
+      background-color: $color-orange;
+      color: $color-white;
     }
 
     &.active {
-      background-color: var(--color-light-grey);
-      color: var(--color-white);
+      background-color: $color-light-grey;
+      color: $color-white;
     }
 
-    @media (min-width: 540px) {
+    @media (min-width: $width-tablet) {
       width: 3.125rem;
       height: 3.125rem;
     }
   }
 
   &__input:checked ~ .rating__label {
-    background-color: var(--color-medium-grey);
-    color: var(--color-white);
+    background-color: $color-medium-grey;
+    color: $color-white;
   }
 }
